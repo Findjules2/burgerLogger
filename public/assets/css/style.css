@@ -1,7 +1,11 @@
 #burgerImage {
     width: 90px;
+    margin: auto;
 }
 
+.container {
+    align-content: center
+}
 
 li {
     background-color:;

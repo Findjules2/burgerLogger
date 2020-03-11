@@ -1,22 +1,8 @@
-<style media="screen">
-    li {
-        background-color: wheat;
-        margin-bottom: 10px;
-        padding: 10px;
 
-            {
-                {
-                 !-- width: 50%;
-                --
-            }
-        }
-
-        font-family: sans-serif;
-    }
-</style>
-<container>
-
+<div class="container">
+<div class="row">
     <img id="burgerImage" src="\assets\images\burgerimage.png">
+</div>
     <br></br>
 
     <h1>Eat-Da-Burger!</h1>
@@ -25,24 +11,28 @@
         <div class="col-6">
             <ul>
                 {{#each burgers}}
+                {{#unless devoured}}
                 <li>
                     <p>Droid
-                        {{this.id}}. {{this.burger}}
+                        {{id}}. {{burger}}
 
                         <button data-burgerid="{{this.id}}" class="delburger">Devour Burger!</button>
                     </p>
                 </li>
+                {{/unless}}
                 {{/each}}
             </ul>
         </div>
         <div class="col-6">
             <ul>
                 {{#each burgers}}
+                {{#if devoured}}
                 <li>
                     <p>Hello Moto
                         {{this.id}}. {{this.burger}}
                     </p>
                 </li>
+                {{/if}}
                 {{/each}}
             </ul>
         </div>
@@ -57,19 +47,8 @@
         </form>
         <p>Create a Burger You Want to Eat and Hit Submit</p>
     </div>
-</container>
+</div>
 
-{{!-- //Create a second column for DEVOURED BURGERS --}}
-<h2>Update a Burger to Devoured</h2>
-<form id="updateburger" class="button-size">
-    <select name="id">
-        {{#each burgers}}
-        <option value="{{this.id}}">{{this.burger}}</option>
-        {{/each}}
-    </select>
-    <textarea type="text" name="burger" placeholder="burger"></textarea>
-    <button type="submit">Update Burger!</button>
-</form>
 
 <script type="text/javascript">
     $(".delburger").on("click", function (event) {
@@ -79,7 +58,7 @@
 
         // Send the DELETE request.
         $.ajax("/api/burgers/" + id, {
-            type: "DELETE"
+            method: "PUT"
         }).then(
             function () {
                 console.log("deleted id ", id);

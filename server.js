@@ -79,9 +79,12 @@ app.post("/api/burgers", function(req, res) {
 
 //Update is going to turn into Devore and turn boolean to true
 app.put("/api/burgers/:id", function(req, res) {
-  connection.query("UPDATE burgers SET devoured = true WHERE id = ?", [req.body.burger, req.params.id], function(err, result) {
+  console.log(req.params.id);
+  
+  connection.query("UPDATE burgers SET devoured = true WHERE id = ?", [req.params.id], function(err, result) {
     if (err) {
       // If an error occurred, send a generic server failure
+      console.log(err)
       return res.status(500).end();
     }
     else if (result.changedRows === 0) {
