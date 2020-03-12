@@ -14,13 +14,18 @@ app.set("view engine", "handlebars");
 
 app.use(express.static("public"));
 
-var connection = mysql.createConnection({
-  host: "localhost",
-  port: 3306,
-  user: "root",
-  password: "root",
-  database: "burgerLoggerDB"
-});
+var connection;
+if(process.env.JAWSDB_URL) {
+  connection = mysql.v-createConnection(process.env.JAWSDB_URL)
+} else {
+  connection = mysql.createConnection({
+    host: "localhost",
+    port: 3306,
+    user: "root",
+    password: "root",
+    database: "burgerLoggerDB"
+  });
+}
 
 connection.connect(function(err) {
   if (err) {
