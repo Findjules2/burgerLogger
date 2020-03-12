@@ -17,4 +17,4 @@
 
 * [Updated Portfolio](https://findjules2.github.io/bootstrapPortfolio/)
 
-![burgerLogger Screenshot](\public\assets\images\burgerLogger.png)
+![burgerLogger Screenshot](/public/assets/images/burgerLogger.png)
