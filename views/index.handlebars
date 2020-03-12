@@ -1,19 +1,19 @@
-
 <div class="container">
-<div class="row">
-    <img id="burgerImage" src="\assets\images\burgerimage.png">
-</div>
-    <br></br>
-
-    <h1>Eat-Da-Burger!</h1>
-    <br></br>
+    <div class="row">
+        <img id="burgerImage" src="\assets\images\burgerimage.png">
+        <br></br>
+    </div>
+    <div class="row">
+        <h1>Eat-Da-Burger!</h1>
+        <br></br>
+    </div>
     <div class="row">
         <div class="col-6">
             <ul>
                 {{#each burgers}}
                 {{#unless devoured}}
                 <li>
-                    <p>Droid
+                    <p>
                         {{id}}. {{burger}}
 
                         <button data-burgerid="{{this.id}}" class="delburger">Devour Burger!</button>
@@ -28,7 +28,7 @@
                 {{#each burgers}}
                 {{#if devoured}}
                 <li>
-                    <p>Hello Moto
+                    <p>
                         {{this.id}}. {{this.burger}}
                     </p>
                 </li>
@@ -38,17 +38,19 @@
         </div>
     </div>
     <br></br>
-
-    <div class="center">
-        <form id="createburger" class="button-size">
-            <textarea type="text" name="burger"></textarea>
-            <br></br>
-            <button type="submit">Submit</button>
-        </form>
-        <p>Create a Burger You Want to Eat and Hit Submit</p>
+    <div class="row justify-content-center">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <form id="createburger" class="button-size">
+                <textarea type="text" name="burger"></textarea>
+                <br></br>
+                <button type="submit">Submit</button>
+            </form>
+            <h3>Create a Burger You Want to Eat and Hit Submit</h3>
+        </div>
+        <div class="col-4"></div>
     </div>
 </div>
-
 
 <script type="text/javascript">
     $(".delburger").on("click", function (event) {

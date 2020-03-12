@@ -1,21 +1,24 @@
 #burgerImage {
-    width: 90px;
+    width: 140px;
     margin: auto;
+    padding: 15px;
 }
 
-.container {
-    align-content: center
+h1 {
+    margin: auto;
+    padding: 15px;
 }
 
-li {
-    background-color:;
-    margin-bottom: 10px;
-    padding: 10px;
-    font-family: sans-serif;
+h3 {
+    margin: auto;
+    padding: 15px;
+    text-align: center;
 }
 
-h2 {
-    color: red;
+#createburger {
+    margin: auto;
+    padding: 15px;
+    text-align: center;
 }
 
 body{

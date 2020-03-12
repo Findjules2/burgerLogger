@@ -54,29 +54,7 @@ app.post("/api/burgers", function(req, res) {
     console.log({ id: result.insertId });
   });
 });
-
-// app.get("/all-non-pets", function(req, res) {
-//     // Handlebars requires an object to be sent to the index handlebars file.
-  
-//     // 3. Loop through the animals, and send those that are not pets to the index handlebars file.
-//     var data = {
-//       animals: []
-//     };
-  
-//     for (var i = 0; i < animals.length; i += 1) {
-//       // Get the current animal.
-//       var currentAnimal = animals[i];
-  
-//       // Check if this animal is a pet.
-//       if (!currentAnimal.pet) {
-//         // If not, push it into our data.animals array.
-//         data.animals.push(currentAnimal);
-//       }
-//     }
-  
-//     res.render("index", data);
-//   });
-
+ 
 //Update is going to turn into Devore and turn boolean to true
 app.put("/api/burgers/:id", function(req, res) {
   console.log(req.params.id);
@@ -95,21 +73,6 @@ app.put("/api/burgers/:id", function(req, res) {
 
   });
 });
-
-// app.delete("/api/burgers/:id", function(req, res) {
-//   connection.query("DELETE FROM burgers WHERE id = ?", [req.params.id], function(err, result) {
-//     if (err) {
-//       // If an error occurred, send a generic server failure
-//       return res.status(500).end();
-//     }
-//     else if (result.affectedRows === 0) {
-//       // If no rows were changed, then the ID must not exist, so 404
-//       return res.status(404).end();
-//     }
-//     res.status(200).end();
-
-//   });
-// });
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {

@@ -12,6 +12,3 @@ CREATE TABLE burgers (
   devoured BOOLEAN NOT NULL default 0,
   PRIMARY KEY (id)
 );
-
--- Insert a set of records.
-INSERT INTO burgers (burger) VALUES ('BLT Burger');

@@ -49,37 +49,8 @@ Having an active and healthy commit history on GitHub is important for your futu
 
 * **This assignment must be deployed.** * Please submit both the deployed Heroku link to your homework AND the link to the Github Repository!
 
-## Instructions
 
-#### App Setup
 
-1. Create a GitHub repo called `burger` and clone it to your computer.
-
-2. Make a package.json file by running `npm init` from the command line.
-
-3. Install the Express npm package: `npm i express`.
-
-4. Create a server.js file.
-
-5. Install the Handlebars npm package: `npm i express-handlebars`.
-
-6. Install MySQL npm package: `npm i mysql`  or   `npm i mysql2 && npm i sequelize` if you are doing the harder version .
-
-7. Require the following npm packages inside of the server.js file:
-   * express
-
-#### DB Setup
-
-1. Inside your `burger` directory, create a folder named `db`.
-
-2. In the `db` folder, create a file named `schema.sql`. Write SQL queries this file that do the following:
-
-   * Create the `burgers_db`.
-   * Switch to or use the `burgers_db`.
-   * Create a `burgers` table with these fields:
-     * **id**: an auto incrementing int that serves as the primary key.
-     * **burger_name**: a string.
-     * **devoured**: a boolean.
 
 3. Still in the `db` folder, create a `seeds.sql` file. In this file, write insert queries to populate the `burgers` table with at least three entries.
 
@@ -108,54 +79,7 @@ Having an active and healthy commit history on GitHub is important for your futu
     * Edit your new `config.json` file to include your database configurations. Place your JawsDB details in the `production` property of your json file; the details of your local database go in the `developer` property.
 
 
-#### View setup
 
-1. Inside your `burger` directory, create a folder named `views`.
-
-   * Create the `index.handlebars` file inside `views` directory.
-
-   * Create the `layouts` directory inside `views` directory.
-
-     * Create the `main.handlebars` file inside `layouts` directory.
-
-     * Setup the `main.handlebars` file so it's able to be used by Handlebars.
-
-     * Setup the `index.handlebars` to have the template that Handlebars can render onto.
-
-     * Create a button in `index.handlebars` that will submit the user input into the database.
-
-#### Directory structure
-
-All the recommended files and directories from the steps above should look like the following structure:
-
-```
-.
-
-│
-├── db
-│   ├── schema.sql
-│   └── seeds.sql
-|
-├── node_modules
-│ 
-├── package.json
-│
-├── public
-│   └── assets
-│       ├── css
-│       │   └── burger_style.css
-│       └── img
-│           └── burger.png
-│   
-│
-├── server.js
-│
-└── views
-    ├── index.handlebars
-    └── layouts
-        └── main.handlebars
-```
-The above will be slightly different if you use sequelize 
 
 
 ### Reminder: Submission on BCS
@@ -205,3 +129,10 @@ If you have any questions about this project or the material we have covered, pl
 When trying to connect remotely to your Heroku database on an open network such as a coffee shop, library, or even your University WiFi, it will be blocked. If you are experiencing a Heroku connection error, this could be why.
 
 **Good Luck!**
+* [The URL of the deployed application](https://)
+
+* [The URL of the GitHub repository](https://github.com/Findjules2/burgerLogger)
+
+* [Updated Portfolio](https://findjules2.github.io/bootstrapPortfolio/)
+
+![burgerLogger Screenshot](./assets/images/)
